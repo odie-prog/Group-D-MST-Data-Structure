@@ -112,3 +112,79 @@ int main()
     return 0;
 }
 ```
+
+# Pseudocode
+```
+define a struct to represent a street
+{
+    // store the connection details:
+    // - building a
+    // - building b
+    // - length c
+}
+create global arrays to store the list of streets and the parent of each building
+
+function to compare two streets for sorting
+{
+    // check two streets: e1 and e2
+    // if e1 has a smaller length c than e2, return -1 (comes first)
+    // if e1 has a larger length c than e2, return 1 (comes later)
+    // otherwise, they have equal lengths, return 0
+}
+
+function to find the root representative of a building
+{
+    // if a building is its own parent, it is the root, so return it
+    // path compression: find the root, point the building directly to it, and return it
+}
+
+main entry point of the program
+{
+    // read total number of testcases t
+    // if reading fails, exit program
+
+    loop through each testcase until none are left
+    {
+        // setup variables for price p, buildings n, and streets m
+        // read input data values for price p, buildings n, and streets m
+
+        loop through every single street from index 0 up to m - 1
+        {
+            // read and store building a, building b, and length c for the current street
+        }
+
+        // sort all elements in the streets array by length c using the compare function
+
+        loop through every single building from index 1 up to n
+        {
+            // set each building to be its own parent initially (separate sets)
+        }
+
+        // initialize total street length and used street count to 0
+
+        loop through the sorted list of streets one by one
+        {
+            // find the root of building a
+            // find the root of building b
+
+            if the root of building a is NOT the same as the root of building b
+            {
+                // union operation: point the root of building a to the root of building b
+
+                // add the current length c to the total street length
+                // increment the count of used streets
+
+                if the count of used streets is exactly equal to buildings n minus one
+                {
+                    // exit the loop early because the buildings are fully connected
+                }
+            }
+        }
+
+        // multiply the total street length by the price p
+        // print the final calculated result
+    }
+
+    end the program successfully
+}
+```
