@@ -122,6 +122,7 @@ define a struct to represent a street
     // - building b
     // - length c
 }
+
 create global arrays to store the list of streets and the parent of each building
 
 function to compare two streets for sorting
