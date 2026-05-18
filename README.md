@@ -1,4 +1,4 @@
-# Group-D-MST-Data-Structure
+# Group D MST - Data Structure
 
 |    NRP     |           Nama             |
 | :--------: |       :-------------------:       |
